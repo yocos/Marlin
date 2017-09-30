@@ -127,7 +127,7 @@
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
-//#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
+#define MACHINE_UUID "f558b900-63eb-4616-8b35-d79422888557"
 
 // @section extruder
 
@@ -524,7 +524,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 4000, 600 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 600 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -561,10 +561,10 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-#define DEFAULT_XJERK                 20.0
-#define DEFAULT_YJERK                 20.0
-#define DEFAULT_ZJERK                  8.0
-#define DEFAULT_EJERK                  8.0
+#define DEFAULT_XJERK                 8.0
+#define DEFAULT_YJERK                 8.0
+#define DEFAULT_ZJERK                  0.4
+#define DEFAULT_EJERK                  5.0
 
 //===========================================================================
 //============================= Z Probe Options =============================
