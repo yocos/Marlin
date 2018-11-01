@@ -526,7 +526,8 @@
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 570.66 }
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 600 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 87.5629 }
+//Extruder --> New step = OldStep * ( Desired length  / Mesured Length )
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 425.19}
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
@@ -681,7 +682,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER -40  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.6   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -1.0   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -752,7 +753,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -784,9 +785,9 @@
 #define Z_MAX_POS 300
 
 // If enabled, axes won't move below MIN_POS in response to movement commands.
-#define MIN_SOFTWARE_ENDSTOPS true
+#define MIN_SOFTWARE_ENDSTOPS false
 // If enabled, axes won't move above MAX_POS in response to movement commands.
-#define MAX_SOFTWARE_ENDSTOPS true
+#define MAX_SOFTWARE_ENDSTOPS false
 
 /**
  * Filament Runout Sensor
@@ -847,8 +848,8 @@
  *   With an LCD controller the process is guided step-by-step.
  */
 //#define AUTO_BED_LEVELING_3POINT
-//#define AUTO_BED_LEVELING_LINEAR
-#define AUTO_BED_LEVELING_BILINEAR
+#define AUTO_BED_LEVELING_LINEAR
+//#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
