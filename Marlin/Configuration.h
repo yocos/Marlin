@@ -610,7 +610,8 @@
  */
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 570.66 }
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 600 }
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 87.5629 }
+//Extruder --> New step = OldStep * ( Desired length  / Mesured Length )
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 425.19}
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
@@ -856,7 +857,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -975,8 +976,8 @@
  *   With an LCD controller the process is guided step-by-step.
  */
 //#define AUTO_BED_LEVELING_3POINT
-//#define AUTO_BED_LEVELING_LINEAR
-#define AUTO_BED_LEVELING_BILINEAR
+#define AUTO_BED_LEVELING_LINEAR
+//#define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
